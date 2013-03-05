@@ -9,7 +9,7 @@ module Spree
           validates :calculator, :presence => true
 
           def self.calculators
-            Rails.application.config.spree.calculators.send(self.to_s.tableize.gsub('/', '_').sub('fashdev_', ''))
+            Rails.application.config.spree.calculators.send(self.to_s.tableize.gsub('/', '_').sub('spree_', ''))
           end
 
           def calculator_type
